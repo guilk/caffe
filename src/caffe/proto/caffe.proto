@@ -402,7 +402,8 @@ message LayerParameter {
   optional ThresholdParameter threshold_param = 128;
   optional TileParameter tile_param = 138;
   optional WindowDataParameter window_data_param = 129;
-  optional TripletLossParameter triplet_loss_param = 143;
+  optional TripletLossParameter triplet_loss_param = 146;
+  optional NormalizationParameter normalization_param = 147;
 }
 
 // Message that stores parameters used to apply transformation
@@ -551,6 +552,16 @@ message ContrastiveLossParameter {
   // legacy_version = true uses (margin - d^2). This is kept to support /
   // reproduce existing models and results
   optional bool legacy_version = 2 [default = false];
+}
+
+// add normalization param
+message NormalizationParameter {
+	enum Norm{
+		L1 = 1;
+		L2 = 2;
+	}
+	// Specify the Norm to use L1 or L2
+	optional Norm norm = 1 [default = L2];
 }
 
 message TripletLossParameter {
