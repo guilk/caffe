@@ -1,8 +1,6 @@
 #ifndef CAFFE_NORMALIZATION_LAYER_HPP_
 #define CAFFE_NORMALIZATION_LAYER_HPP_
 
-#include <string>
-#include <utility>
 #include <vector>
 
 #include "caffe/blob.hpp"
@@ -10,6 +8,7 @@
 #include "caffe/proto/caffe.pb.h"
 
 namespace caffe {
+	
 template <typename Dtype>
 class NormalizationLayer : public Layer<Dtype> {
  public:
