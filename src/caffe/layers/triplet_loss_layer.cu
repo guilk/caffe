@@ -646,5 +646,4 @@ void TripletLossLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 }
 
 INSTANTIATE_LAYER_GPU_FUNCS(TripletLossLayer);
-
 }  // namespace caffe

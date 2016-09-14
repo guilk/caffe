@@ -68,5 +68,4 @@ STUB_GPU(NormalizationLayer);
 
 INSTANTIATE_CLASS(NormalizationLayer);
 REGISTER_LAYER_CLASS(Normalization);
-
 }  // namespace caffe
